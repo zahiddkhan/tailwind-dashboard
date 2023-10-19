@@ -5,4 +5,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+
+  variants: {
+    extend: {
+      textOpacity: ['dark']
+    }
+  },
+  darkMode: 'class',
 }

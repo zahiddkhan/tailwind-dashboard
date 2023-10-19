@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="stylet.css">
     <link rel="stylesheet" href="style.css">
 
-
+    <style>
+        .dark {
+            background-color: #1F2937;
+            color: white;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="dark:text-white font-sans bg-slate-100">
+
     <!-- Sidebar -->
-    <aside class="bg-gray-700 text-white w-64 min-h-screen p-4 fixed rounded-md m-2">
+    <aside
+        class="duration-700  nav bg-gray-700 dark:bg-gray-600 text-white w-64 min-h-screen p-4 fixed rounded-md m-2 "
+        id="menu">
         <!-- Sidebar Content -->
         <div class="flex flex-col items-center divide-y divide-gray-500">
             <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
@@ -113,13 +121,21 @@
 
     <!-- Content -->
     <main class="ml-64 p-4">
+        <div class="absoluteleft-[13%] top-[4%]">
+            <ion-icon class="text-2xl text-gray-400" id="menu-button" name="arrow-back-circle"></ion-icon>
+        </div>
         <!-- Main Content -->
         <h2 class="cursor-pointer">Dashboard <span>/</span> <span class="text-blue-500">Notification</span></h2>
         <h1 class="text-2xl font-semibold mb-4 text-blue-500">Notification</h1>
+        <button class="p-2 bg-slate-500 text-slate-300 rounded-md shadow-md absolute top-4 right-5"
+            onclick="document.body.classList.toggle('dark')">
+            Dark mode
+        </button>
         <!-- notification section -->
         <div class="container py-3 mt-3">
-            <div class="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800] 2xl:w-[920px] mx-auto bg-white rounded-xl shadow-md py-4 px-4">
-             <h2 class="text-2xl font-semibold mb-6">Alerts</h2>
+            <div
+                class="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800] 2xl:w-[920px] mx-auto bg-white dark:bg-gray-600 rounded-xl shadow-md py-4 px-4">
+                <h2 class="text-2xl font-semibold mb-6">Alerts</h2>
                 <div class="mb-4 rounded-lg bg-blue-500 px-6 py-4 text-base text-white" role="alert">
                     A simple primary alert with
                     <a href="#!" class="font-bold text-primary-700">an example link</a>.
@@ -127,7 +143,7 @@
                 </div>
 
 
-                <div class="mb-4 rounded-lg bg-green-600 px-6 py-4 text-base text-white" role="alert">
+                <div class="mb-4 rounded-lg bg-green-600 px-6 py-4 text-base text-whit dark:bg-gray-800e" role="alert">
                     A simple primary alert with
                     <a href="#!" class="font-bold text-primary-700">an example link</a>.
                     Give it a click if you like.
@@ -147,11 +163,12 @@
             </div>
 
         </div>
-      
-          <!-- notification section -->
-          <div class="container py-2">
-            <div class="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800] 2xl:w-[920px] mx-auto bg-white rounded-xl shadow-md py-4 px-4">
-             <h2 class="text-2xl font-semibold mb-6">Notifications</h2>
+
+        <!-- notification section -->
+        <div class="container py-2">
+            <div
+                class="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800] 2xl:w-[920px] mx-auto bg-white dark:bg-gray-600 rounded-xl shadow-md py-4 px-4">
+                <h2 class="text-2xl font-semibold mb-6">Notifications</h2>
                 <div class="mb-4 rounded-lg bg-blue-500 px-6 py-4 text-base text-white" role="alert">
                     A simple primary alert with
                     <a href="#!" class="font-bold text-primary-700">an example link</a>.
@@ -180,8 +197,7 @@
 
         </div>
         <!-- footer -->
-        <footer
-            class="bg-neutral-100 text-center mt-10 text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+        <footer class="bg-white text-center mt-10 text-neutral-600 dark:bg-gray-800 dark:text-neutral-200 lg:text-left">
             <div
                 class="flex items-center justify-center  border-neutral-200 dark:border-neutral-500 lg:justify-between">
                 <div class="mr-12 hidden lg:block">
@@ -232,5 +248,14 @@
     </main>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script>
+    const button = document.querySelector('#menu-button');
+    const menu = document.querySelector('#menu');
+
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 </html>

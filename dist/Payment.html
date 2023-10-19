@@ -8,122 +8,135 @@
     <link rel="stylesheet" href="stylet.css">
     <link rel="stylesheet" href="style.css">
 
-
-</head>
-
-<body class="bg-gray-100 font-sans">
-    <!-- Sidebar -->
-    <aside class="bg-gray-700 text-white w-64 min-h-screen p-4 fixed rounded-md m-2">
+    <style>
+        .dark {
+          background-color: #1F2937;
+          color: white;
+        }
+      </style>
+    </head>
+    
+    <body class="dark:text-white font-sans bg-slate-100">
+        <!-- Sidebar -->
+        <aside
+        class="duration-700  nav bg-gray-700 dark:bg-gray-600 text-white w-64 min-h-screen p-4 fixed rounded-md m-2 "
+        id="menu">
         <!-- Sidebar Content -->
         <div class="flex flex-col items-center divide-y divide-gray-500">
-            <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
-            <ul class="space-y-4 py-5">
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                        </svg></span>
-                    <a href="./Dashboard.html">Dashboard</a></li>
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </span><a href="./Profile.html">Profile</a></li>
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-                        </svg>
-                    </span><a href="./Product.html">Products</a></li>
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
-                        </svg>
-                        </svg>
-                    </span><a href="./Table.html">Table</a></li>
-
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-                        </svg>
-
-                    </span><a href="./Chart.html">Chart</a></li>
-
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-                        </svg>
-                    </span><a href="./Pricing.html">Pricing Page</a></li>
-            </ul>
-
-            <!-- second ul links -->
-            <ul class="space-y-4 py-7">
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                        </svg>
-
-                        </svg></span>
-                    <a href="./Notification.html">Notification</a></li>
-
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-
-                        </svg>
-                    </span><a href="./Payment.html">Payment</a></li>
-
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
-                        </svg>
-
-                        </svg>
-                    </span><a href="./Signin.html">Sign In</a></li>
-                <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
-                        class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                        </svg>
-                    </span><a href="./Signin.html">Logout</a></li>
-            </ul>
-
+          <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
+          <ul class="space-y-4 py-5">
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg></span>
+              <a href="./Dashboard.html">Dashboard</a></li>
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </span><a href="./Profile.html">Profile</a></li>
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+                </svg>
+              </span><a href="./Product.html">Products</a></li>
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+                </svg>
+                </svg>
+              </span><a href="./Table.html">Table</a></li>
+    
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                </svg>
+    
+              </span><a href="./Chart.html">Chart</a></li>
+    
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                </svg>
+              </span><a href="./Pricing.html">Pricing Page</a></li>
+          </ul>
+    
+          <!-- second ul links -->
+          <ul class="space-y-4 py-7">
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+    
+                </svg></span>
+              <a href="./Notification.html">Notification</a></li>
+    
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+    
+                </svg>
+              </span><a href="./Payment.html">Payment</a></li>
+    
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "><span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+                </svg>
+    
+                </svg>
+              </span><a href="./Signin.html">Sign In</a></li>
+            <li class="hover:bg-slate-500 rounded duration-300 w-52 py-2 px-3 flex items-center text-center "> <span
+                class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                </svg>
+              </span><a href="./Signin.html">Logout</a></li>
+          </ul>
+    
         </div>
+      </aside>
     </aside>
 
     <!-- Content -->
     <main class="ml-64 p-4">
+        <div class="absoluteleft-[13%] top-[4%]">
+            <ion-icon class="text-2xl text-gray-400" id="menu-button" name="arrow-back-circle"></ion-icon>
+        </div>
         <!-- Main Content -->
         <h2 class="cursor-pointer">Dashboard <span>/</span> <span class="text-blue-500">Payment</span></h2>
         <h1 class="text-2xl font-semibold mb-4 text-blue-500">Payment</h1>
+        <button class="p-2 bg-slate-500 text-slate-300 rounded-md shadow-md absolute top-4 right-5"
+            onclick="document.body.classList.toggle('dark')">
+            Dark mode
+        </button>
         <!-- card metood -->
-        <div class="grid gap-7 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-
-            <div class="">
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-12">
+            <div class=" xl:col-span-3">
                 <img src="../src/img/card.PNG" alt="img">
             </div>
 
-            <div class="w-96 bg-white rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
+            <div
+                class="xl:col-span-3 py-4  bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
                 <div
                     class="animate-pulse duration-500 w-16 py-5 flex items-center justify-center rounded-lg bg-pink-700 text-white">
                     <ion-icon class="text-2xl" name="logo-alipay"></ion-icon>
@@ -136,7 +149,23 @@
                 <h2 class="mt-2 text-xl font-medium ">+$2000</h2>
             </div>
 
-            <div class="w-96 bg-white rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
+            <div
+                class=" xl:col-span-3 py-4 bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
+                <div
+                    class="animate-pulse duration-500 w-16 py-5 flex items-center justify-center rounded-lg bg-pink-700 text-white">
+                    <ion-icon class="text-2xl" name="logo-paypal"></ion-icon>
+                </div>Paypal
+                <h2 class="mt-2 text-xl font-normal"></h2>
+                <p class="text-base font-normal text-gray-400">Freelance Payment</p>
+
+                <div class="border-b-[1px] border-gray-100 w-36 mt-3">
+                </div>
+                <h2 class="mt-2 text-xl font-medium ">$455.00</h2>
+            </div>
+
+
+            <div
+                class=" xl:col-span-3 py-4 bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
                 <div
                     class="animate-pulse duration-500 w-16 py-5 flex items-center justify-center rounded-lg bg-pink-700 text-white">
                     <ion-icon class="text-2xl" name="logo-paypal"></ion-icon>
@@ -152,62 +181,63 @@
 
         <!-- payment invoice method -->
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-5">
-            <div class="col-span-3 px-4 py-6 bg-white rounded-lg shadow-md ">
-                <h2 class="text-xl text-slate-700 font-normal mb-4">Payment Method</h2>
+            <div class="col-span-3 px-4 py-6 bg-white dark:bg-gray-600 dark:text-white rounded-lg shadow-md ">
+                <h2 class="text-xl text-slate-700 dark:text-white font-normal mb-4">Payment Method</h2>
 
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
                     <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 rounded-lg border-[1px] border-slate-300 px-3 py-5 items-center">
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 dark:bg-gray-500 rounded-lg border-[1px] border-slate-300 px-3 py-5 items-center">
                         <div class="w-12 animate-pulse duration-700"><img
                                 src="https://demos.creative-tim.com/soft-ui-dashboard-tailwind/assets/img/logos/mastercard.png"
                                 alt="img"></div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">****</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">****</p>
                         </div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">****</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">****</p>
                         </div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">****</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">****</p>
                         </div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">7394</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">7394</p>
                         </div>
                     </div>
 
 
                     <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 rounded-lg border-[1px] border-slate-300 px-3 py-5 items-center">
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 dark:bg-gray-500 rounded-lg border-[1px] border-slate-300 px-3 py-5 items-center">
                         <div class="w-12 animate-pulse duration-1000"><img
                                 src="https://demos.creative-tim.com/soft-ui-dashboard-tailwind/assets/img/logos/visa.png"
                                 alt="img"></div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">****</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">****</p>
                         </div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">****</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">****</p>
                         </div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">****</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">****</p>
                         </div>
                         <div>
-                            <p class="text-xl font-bold text-slate-600">82394</p>
+                            <p class="text-xl font-bold text-slate-600 dark:text-white">82394</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-span-2 px-4 py-6 bg-white rounded-lg shadow-md">
+            <div class="col-span-2 px-4 py-6 bg-white dark:bg-gray-600 dark:text-whites rounded-lg shadow-md">
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-6">
-                    <h2 class="text-xl text-slate-700 font-normal mb-4">Payment Method</h2>
-                    <button class="text-purple-500 btn outline outline-purple-600 rounded-md py-1 px-6 uppercase">view
+                    <h2 class="text-xl text-slate-700 dark:text-white font-normal mb-4">Payment Method</h2>
+                    <button
+                        class="text-purple-500 dark:text-white btn outline outline-purple-600 rounded-md py-1 px-6 uppercase">view
                         all</button>
                 </div>
 
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-4">
                     <div class="">
-                        <h3 class="text-base text-slate-700 font-normal">March, 01, 2020</h3>
-                        <p class="text-sm text-slate-500 ">#MS-415646</p>
+                        <h3 class="text-base text-slate-700 dark:text-white font-normal">March, 01, 2020</h3>
+                        <p class="text-sm text-slate-500 dark:text-white ">#MS-415646</p>
                     </div>
 
                     <div>
@@ -217,8 +247,8 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-4">
                     <div class="">
-                        <h3 class="text-base text-slate-700 font-normal">February, 10, 2021</h3>
-                        <p class="text-sm text-slate-500 ">#RV-126749</p>
+                        <h3 class="text-base text-slate-700 dark:text-white font-normal">February, 10, 2021</h3>
+                        <p class="text-sm text-slate-500 dark:text-white">#RV-126749</p>
                     </div>
 
                     <div>
@@ -229,8 +259,8 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-4">
                     <div class="">
-                        <h3 class="text-base text-slate-700 font-normal">April, 05, 2020s</h3>
-                        <p class="text-sm text-slate-500 ">#FB-212562</p>
+                        <h3 class="text-base text-slate-700 dark:text-white font-normal">April, 05, 2020s</h3>
+                        <p class="text-sm text-slate-500 dark:text-white">#FB-212562</p>
                     </div>
 
                     <div>
@@ -240,8 +270,8 @@
             </div>
         </div>
         <!-- billing inforamtion -->
-        <div class="px-4 py-6 bg-white rounded-lg shadow-md mt-5">
-            <h1 class="text-xl text-slate-700 font-normal mb-4">Billing Information</h1>
+        <div class="px-4 py-6 bg-white dark:bg-gray-600 rounded-lg shadow-md mt-5">
+            <h1 class="text-xl text-slate-700 dark:text-white font-normal mb-4">Billing Information</h1>
             <div class="flex flex-col sm:flex-row items-center justify-between mb-5">
                 <div class="">
                     <h4>Oliver Liam</h4>
@@ -274,8 +304,7 @@
             </div>
         </div>
         <!-- footer -->
-        <footer
-            class="bg-neutral-100 text-center mt-10 text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+        <footer class="bg-white text-center mt-10 text-neutral-600 dark:bg-gray-800 dark:text-neutral-200 lg:text-left">
             <div
                 class="flex items-center justify-center  border-neutral-200 dark:border-neutral-500 lg:justify-between">
                 <div class="mr-12 hidden lg:block">
@@ -326,5 +355,14 @@
     </main>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script>
+    const button = document.querySelector('#menu-button');
+    const menu = document.querySelector('#menu');
+
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 </html>

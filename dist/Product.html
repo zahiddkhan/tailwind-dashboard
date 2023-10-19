@@ -8,12 +8,19 @@
     <link rel="stylesheet" href="stylet.css">
     <link rel="stylesheet" href="style.css">
 
-
+    <style>
+        .dark {
+            background-color: #1F2937;
+            color: white;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="dark:text-white font-sans bg-slate-100 ">
+
     <!-- Sidebar -->
-    <aside class="bg-gray-700 text-white w-64 min-h-screen p-4 fixed rounded-md m-2">
+    <aside class="duration-700  nav bg-gray-700 dark:bg-gray-600 text-white w-64 min-h-screen p-4 fixed rounded-md m-2 "
+        id="menu">
         <!-- Sidebar Content -->
         <div class="flex flex-col items-center divide-y divide-gray-500">
             <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
@@ -113,12 +120,21 @@
 
     <!-- Content -->
     <main class="ml-64 p-4">
+        <div class="absoluteleft-[13%] top-[4%]">
+            <ion-icon class="text-2xl text-gray-400" id="menu-button" name="arrow-back-circle"></ion-icon>
+        </div>
         <!-- Main Content -->
         <h2 class="cursor-pointer">Dashboard <span>/</span> <span class="text-blue-500">Product</span></h2>
         <h1 class="text-2xl font-semibold mb-4 text-blue-500">Product</h1>
+
+        <button class="p-2 bg-slate-500 text-slate-300 rounded-md shadow-md absolute top-4 right-5"
+            onclick="document.body.classList.toggle('dark')">
+            Dark mode
+        </button>
         <!-- notification section -->
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 rounded-md shadow-md bg-white px-5 py-5">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 rounded-md shadow-md bg-white dark:bg-gray-600 px-5 py-5">
             <div class="">
                 <h2 class="mb-4 text-xl font-medium">All Product</h2>
                 <div class="relative mb-3" data-te-input-wrapper-init>
@@ -143,9 +159,10 @@
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                         <div class="overflow-hidden">
-                            <table class="min-w-full text-center text-sm font-light bg-white rounded-md shadow-md">
+                            <table
+                                class="min-w-full text-center text-sm font-light bg-white dark:bg-gray-600  rounded-md shadow-md">
                                 <thead
-                                    class="border-b bg-white text-gray-500 text-justify font-medium dark:border-neutral-500 dark:text-neutral-800 ">
+                                    class="border-b bg-white dark:bg-gray-600  text-gray-500 dark:text-white text-justify font-medium dark:border-neutral-500">
                                     <tr>
                                         <th scope="col" class=" px-6 py-4">PRODUCT NAME</th>
                                         <th scope="col" class=" px-6 py-4">CATEGORY</th>
@@ -167,17 +184,17 @@
                                             </div>
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">Chair</h2>
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">Chair</h2>
 
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">
                                                 $89.53</h2>
 
                                         </td>
 
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <p class=" font-normal text-slate-500">230019</p>
+                                            <p class=" font-normal text-slate-500 dark:text-white">230019</p>
                                         </td>
 
                                         <td class="px-6 py-4">
@@ -199,18 +216,19 @@
                                             </div>
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">Chair Barstool</h2>
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">Chair
+                                                Barstool</h2>
 
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">
 
                                                 $99.99</h2>
 
                                         </td>
 
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <p class=" font-normal text-slate-500">87120</p>
+                                            <p class=" font-normal text-slate-500 dark:text-white">87120</p>
                                         </td>
 
                                         <td class="px-6 py-4">
@@ -227,21 +245,24 @@
                                                 <div>
                                                     <h5 class=" text-xl text-justify font-medium leading-tight">
                                                         Signature Design by Ashley</h5>
-                                                    <p class="text-neutral-500 text-justify  dark:text-neutral-400"></p>
+                                                    <p
+                                                        class="text-neutral-500 text-justify dark:text-white">
+                                                    </p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">Signature Design </h2>
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">Signature
+                                                Design </h2>
 
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">
                                                 $129.00</h2>
                                         </td>
 
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <p class=" font-normal text-slate-500">412301</p>
+                                            <p class=" font-normal text-slate-500 dark:text-white">412301</p>
                                         </td>
 
                                         <td class="px-6 py-4">
@@ -255,23 +276,24 @@
                                                 <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/chair-wood.jpg"
                                                     alt="Avatar" class="mr-4 mb-4 w-14 rounded-md">
                                                 <div>
-                                                    <h5 class=" text-xl text-justify font-medium leading-tight">
+                                                    <h5
+                                                        class=" text-xl text-justify font-medium leading-tight dark:text-white">
                                                         Modern Square</h5>
-                                                    <p class="text-neutral-500 text-justify  dark:text-neutral-400"></p>
+                                                    <p class="text-neutral-500 text-justify dark:text-white"></p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">Stool </h2>
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white ">Stool </h2>
 
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">
                                                 $59.99</h2>
                                         </td>
 
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <p class=" font-normal text-slate-500">001992</p>
+                                            <p class=" font-normal text-slate-500 dark:text-white">001992</p>
                                         </td>
 
                                         <td class="px-6 py-4">
@@ -293,16 +315,20 @@
                                             </div>
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500"> Clothing </h2>
+
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white"> Clothing
+                                            </h2>
 
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">
+
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white ">
                                                 $1,321</h2>
                                         </td>
 
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <p class=" font-normal text-slate-500">243598234</p>
+
+                                            <p class=" font-normal text-slate-500 dark:text-white">243598234</p>
                                         </td>
 
                                         <td class="px-6 py-4">
@@ -323,16 +349,16 @@
                                             </div>
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500"> Shoes </h2>
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white"> Shoes </h2>
 
                                         </td>
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <h2 class="text-xl font-normal text-slate-500">
+                                            <h2 class="text-xl font-normal text-slate-500 dark:text-white">
                                                 $869</h2>
                                         </td>
 
                                         <td class="whitespace-nowrap  px-6 py-4 text-justify">
-                                            <p class=" font-normal text-slate-500">634729</p>
+                                            <p class=" font-normal text-slate-500 dark:text-white">634729</p>
                                         </td>
 
                                         <td class="px-6 py-4">
@@ -350,7 +376,7 @@
                         <ul class="list-style-none flex">
                             <li>
                                 <a
-                                    class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400">Previous</a>
+                                    class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-white">Previous</a>
                             </li>
                             <li>
                                 <a class="relative block rounded bg-gray-300 px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
@@ -379,8 +405,7 @@
         </div>
 
         <!-- footer -->
-        <footer
-            class="bg-neutral-100 text-center mt-10 text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+        <footer class="bg-white text-center mt-10 text-neutral-600 dark:bg-gray-800 dark:text-neutral-200 lg:text-left">
             <div
                 class="flex items-center justify-center  border-neutral-200 dark:border-neutral-500 lg:justify-between">
                 <div class="mr-12 hidden lg:block">
@@ -431,5 +456,14 @@
     </main>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script>
+    const button = document.querySelector('#menu-button');
+    const menu = document.querySelector('#menu');
+
+
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 </html>

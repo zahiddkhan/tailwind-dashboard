@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body  class="bg-slate-300 ">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"> 
+    </script> 
 
-   <aside class="bg-gray-600 w-64 mi min-h-screen fixed p-7 ">
+    <style> 
+     .dark { 
+        background-color: rgb(12, 12, 23); 
+        color: white; 
+
+      } 
+  </style> 
+</head>
+<body  class="bg-slate-300 dark">
+
+   <aside class="bg-gray-600 dark:bg-gray-400 w-64 mi min-h-screen fixed p-7 ">
      <div class="flex flex-col items-center text-white text-2xl">
           <h1>Dashboard</h1>
 
@@ -23,23 +33,26 @@
 
    </aside>
 
- 
 <main class=" ml-64 p-4">
-  
+  <button class="p-2 bg-slate-500 text-slate-300 rounded-md shadow-md" onclick="document.body.classList.toggle('dark')"> 
+    Switch theme 
+</button> 
+
+
      <h1>Dashboard</h1>
 
      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-white p-4 shadow-md rounded-md">
+        <div class="bg-white dark:bg-gray-400 p-4 shadow-md rounded-md">
             <h2 class="text-lg font-semibold">Total Orders</h2>
             <p class="text-3xl font-bold mt-2">128</p>
           </div>
 
-          <div class="bg-white p-4 shadow-md rounded-md">
+          <div class="bg-white dark:bg-gray-400 p-4 shadow-md rounded-md">
             <h2 class="text-lg font-semibold">Total Orders</h2>
             <p class="text-3xl font-bold mt-2">128</p>
           </div>
 
-          <div class="bg-white p-4 shadow-md rounded-md">
+          <div class="bg-whitedark:bg-gray-400 p-4 shadow-md rounded-md">
             <h2 class="text-lg font-semibold">Total Orders</h2>
             <p class="text-3xl font-bold mt-2">128</p>
           </div>
@@ -47,7 +60,7 @@
 
       <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         <div class="m-5">
-            <div class="flex items-center bg-slate-100 shadow-xl rounded-xl max-w-sm mx-auto p-5 space-x-6">
+            <div class="flex items-center bg-slate-100 dark:bg-gray-400 shadow-xl rounded-xl max-w-sm mx-auto p-5 space-x-6">
                 <div class="">
                   <img class="w-12 h-12 rounded-full" src="https://picsum.photos/60" alt="img">
                 </div>
@@ -76,9 +89,12 @@
          </div>
      </div>
       </div>
+
   
 </main>
 
- 
+<script> 
+
+</script> 
 </body>
 </html>
