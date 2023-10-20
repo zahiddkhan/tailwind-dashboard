@@ -19,7 +19,7 @@
     <body class="dark:text-white font-sans bg-slate-100">
         <!-- Sidebar -->
         <aside
-        class="duration-700  nav bg-gray-700 dark:bg-gray-600 text-white  md:w-64 w-52 sm:w-52 min-h-screen p-4 fixed rounded-md m-2 "
+        class="duration-700 nav z-10 bg-gray-700 dark:bg-gray-600 text-white  md:w-64 w-52 sm:w-52 min-h-screen p-4 fixed rounded-md m-2 "
         id="menu">
         <!-- Sidebar Content -->
         <div class="flex flex-col items-center divide-y divide-gray-500">
@@ -118,8 +118,8 @@
     </aside>
 
     <!-- Content -->
-    <main class="ml-52 md:ml-64 sm:ml-52 p-4">
-        <div class="absoluteleft-[13%] top-[4%]">
+    <main class="w-[86%]   duration-200 ml-auto p-4 " id="main">
+        <div class="absolute left-[13%] top-[4%] z-20">
             <ion-icon class="text-2xl text-gray-400" id="menu-button" name="arrow-back-circle"></ion-icon>
         </div>
         <!-- Main Content -->
@@ -131,12 +131,12 @@
         </button>
         <!-- card metood -->
         <div class="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-12">
-            <div class=" xl:col-span-3">
-                <img src="../src/img/card.PNG" alt="img">
+            <div class=" xl:col-span-3 drop-shadow-xl">
+                <img src="../src/img/card.PNG" alt="img" >
             </div>
 
             <div
-                class="xl:col-span-3 py-4  bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
+                class="xl:col-span-3 py-4  bg-white dark:bg-gray-600 rounded-lg drop-shadow-xl flex flex-col items-center justify-center">
                 <div
                     class="animate-pulse duration-500 w-16 py-5 flex items-center justify-center rounded-lg bg-pink-700 text-white">
                     <ion-icon class="text-2xl" name="logo-alipay"></ion-icon>
@@ -146,11 +146,12 @@
 
                 <div class="border-b-[1px] border-gray-100 w-36 mt-3">
                 </div>
+
                 <h2 class="mt-2 text-xl font-medium ">+$2000</h2>
             </div>
 
             <div
-                class=" xl:col-span-3 py-4 bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
+                class=" xl:col-span-3 py-4 bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 drop-shadow-xl  flex flex-col items-center justify-center">
                 <div
                     class="animate-pulse duration-500 w-16 py-5 flex items-center justify-center rounded-lg bg-pink-700 text-white">
                     <ion-icon class="text-2xl" name="logo-paypal"></ion-icon>
@@ -165,7 +166,7 @@
 
 
             <div
-                class=" xl:col-span-3 py-4 bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 flex flex-col items-center justify-center">
+                class=" xl:col-span-3 py-4 bg-white dark:bg-gray-600 rounded-lg shadow-emerald-50 drop-shadow-xl flex flex-col items-center justify-center">
                 <div
                     class="animate-pulse duration-500 w-16 py-5 flex items-center justify-center rounded-lg bg-pink-700 text-white">
                     <ion-icon class="text-2xl" name="logo-paypal"></ion-icon>
@@ -178,10 +179,10 @@
                 <h2 class="mt-2 text-xl font-medium ">$455.00</h2>
             </div>
         </div>
-
+        
         <!-- payment invoice method -->
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-5">
-            <div class="col-span-3 px-4 py-6 bg-white dark:bg-gray-600 dark:text-white rounded-lg shadow-md ">
+            <div class="col-span-3 px-4 py-6 bg-white dark:bg-gray-600 dark:text-white rounded-lg shadow-md drop-shadow-xl">
                 <h2 class="text-xl text-slate-700 dark:text-white font-normal mb-4">Payment Method</h2>
 
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
@@ -206,8 +207,8 @@
 
 
                     <div
-                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 dark:bg-gray-500 rounded-lg border-[1px] border-slate-300 px-3 py-5 items-center">
-                        <div class="w-12 animate-pulse duration-1000"><img
+                        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 dark:bg-gray-500 drop-shadow-xl rounded-lg border-[1px] border-slate-300 px-3 py-5 items-center">
+                        <div class="w-12 animate-pulse duration-1000 drop-shadow-xl"><img
                                 src="https://demos.creative-tim.com/soft-ui-dashboard-tailwind/assets/img/logos/visa.png"
                                 alt="img"></div>
                         <div>
@@ -226,7 +227,7 @@
                 </div>
 
             </div>
-            <div class="col-span-2 px-4 py-6 bg-white dark:bg-gray-600 dark:text-whites rounded-lg shadow-md">
+            <div class="col-span-2 px-4 py-6 bg-white dark:bg-gray-600 dark:text-whites rounded-lg shadow-md drop-shadow-xl">
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-6">
                     <h2 class="text-xl text-slate-700 dark:text-white font-normal mb-4">Payment Method</h2>
                     <button
@@ -270,7 +271,7 @@
             </div>
         </div>
         <!-- billing inforamtion -->
-        <div class="px-4 py-6 bg-white dark:bg-gray-600 rounded-lg shadow-md mt-5">
+        <div class="px-4 py-6 bg-white dark:bg-gray-600 rounded-lg shadow-md drop-shadow-xl mt-5">
             <h1 class="text-xl text-slate-700 dark:text-white font-normal mb-4">Billing Information</h1>
             <div class="flex flex-col sm:flex-row items-center justify-between mb-5">
                 <div class="">
@@ -304,7 +305,7 @@
             </div>
         </div>
         <!-- footer -->
-        <footer class="bg-white text-center mt-10 text-neutral-600 dark:bg-gray-800 dark:text-neutral-200 lg:text-left">
+        <footer class="bg-white  text-center mt-10 text-neutral-600 dark:bg-gray-800 dark:text-neutral-200 lg:text-left">
             <div
                 class="flex items-center justify-center  border-neutral-200 dark:border-neutral-500 lg:justify-between">
                 <div class="mr-12 hidden lg:block">
@@ -356,12 +357,16 @@
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script>
-    const button = document.querySelector('#menu-button');
+  const button = document.querySelector('#menu-button');
     const menu = document.querySelector('#menu');
+    const main = document.querySelector('#main');
 
 
     button.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+        // main.classList.toggle('w-full');
+        main.classList.toggle('w-[95%]');
+        
     });
 </script>
 

@@ -120,8 +120,8 @@
     </aside>
 
     <!-- Content -->
-    <main class="ml-52 md:ml-64  sm:ml-52 p-4">
-        <div class="absoluteleft-[13%] top-[4%]">
+    <main class="w-[86%]   duration-200 ml-auto  p-4" id="main">
+        <div class="absolute left-[13%] top-[4%] z-20">
             <ion-icon class="text-2xl text-gray-400" id="menu-button" name="arrow-back-circle"></ion-icon>
         </div>
         <!-- Main Content -->
@@ -251,10 +251,14 @@
 <script>
     const button = document.querySelector('#menu-button');
     const menu = document.querySelector('#menu');
+    const main = document.querySelector('#main');
 
 
     button.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+        // main.classList.toggle('w-full');
+        main.classList.toggle('w-[95%]');
+
     });
 </script>
 

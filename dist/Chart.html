@@ -19,8 +19,9 @@
 <body class="dark:text-white font-sans bg-slate-100">
 
     <!-- Sidebar -->
-    <aside class="duration-700  nav bg-gray-700 dark:bg-gray-600 text-white md:w-64 w-52 sm:w-52  min-h-screen p-4 fixed rounded-md m-2 "
-        id="menu">
+    <aside
+        class="duration-700 z-10  nav bg-gray-700 dark:bg-gray-600 text-white md:w-64 w-52 sm:w-52  min-h-screen p-4 fixed rounded-md m-2 " id="menu"
+      >
         <!-- Sidebar Content -->
         <div class="flex flex-col items-center divide-y divide-gray-500">
             <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
@@ -119,8 +120,8 @@
     </aside>
 
     <!-- Content -->
-    <main class="ml-52 md:ml-64  sm:ml-52 p-4">
-        <div class="absoluteleft-[13%] top-[4%]">
+    <main class="w-[86%]   duration-200 ml-auto p-4"      id="main">
+        <div class="absolute left-[13%] top-[4%] z-20">
             <ion-icon class="text-2xl text-gray-400" id="menu-button" name="arrow-back-circle"></ion-icon>
         </div>
         <!-- Main Content -->
@@ -346,12 +347,16 @@
     });
 </script>
 <script>
-    const button = document.querySelector('#menu-button');
+ const button = document.querySelector('#menu-button');
     const menu = document.querySelector('#menu');
+    const main = document.querySelector('#main');
 
 
     button.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+        // main.classList.toggle('w-full');
+        main.classList.toggle('w-[95%]');
+        
     });
 </script>
 

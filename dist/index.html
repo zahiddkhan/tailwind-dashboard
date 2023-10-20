@@ -7,16 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"> 
     </script> 
-
-    <style> 
-     .dark { 
-        background-color: rgb(12, 12, 23); 
-        color: white; 
-
-      } 
-  </style> 
 </head>
-<body  class="bg-slate-300 dark">
+<body  class="bg-slate-300 ">
 
    <aside class="bg-gray-600 dark:bg-gray-400 w-64 mi min-h-screen fixed p-7 ">
      <div class="flex flex-col items-center text-white text-2xl">
@@ -52,7 +44,7 @@
             <p class="text-3xl font-bold mt-2">128</p>
           </div>
 
-          <div class="bg-whitedark:bg-gray-400 p-4 shadow-md rounded-md">
+          <div class="bg-white dark:bg-gray-400 p-4 shadow-md rounded-md">
             <h2 class="text-lg font-semibold">Total Orders</h2>
             <p class="text-3xl font-bold mt-2">128</p>
           </div>
@@ -65,9 +57,10 @@
                   <img class="w-12 h-12 rounded-full" src="https://picsum.photos/60" alt="img">
                 </div>
          
-                <div class="text-black text-2xl font-medium">
+                <div class="text-black text-2xl font-medium dark:text-gray-100">
                     Tailwind
-                    <p class= "text-base text-slate-400" >By zahid javed</p>
+                    <p class= "text-base text-slate-400 dark:text-gray-100
+                    " >By zahid javed</p>
                 </div>
             </div>
          </div>
@@ -77,12 +70,12 @@
                 <div>
                    <img class="h-48 w-full object-cover md:h-40 md:w-52" src="https://images.pexels.com/photos/18384911/pexels-photo-18384911/free-photo-of-vintage-tram-on-narrow-street-in-lisbon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img">
                 </div>
-                <div class="p-6">
-                  <div class="uppercase tracking-wide text-indigo-500 font-semibold text-sm">
+                <div class="p-6 dark:bg-gray-400 ">
+                  <div class="uppercase tracking-wide text-indigo-500 font-semibold text-sm dark:bg-gray-400 ">
                     An awesome card
                   </div>
-                   <a class="block mt-1 text-lg font-medium hover:text-blue-700" href=""> Read more About Tailind css </a>
-                   <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing.
+                   <a class="block mt-1 text-lg font-medium hover:text-blue-700 dark:text-gray-100" href=""> Read more About Tailind css </a>
+                   <p class="text-slate-500 dark:text-gray-100">Lorem ipsum dolor sit amet consectetur adipisicing.
                    </p>
                 </div>
             </div>
