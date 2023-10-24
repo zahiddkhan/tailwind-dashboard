@@ -34,6 +34,7 @@
      <h1>Dashboard</h1>
 
      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        
         <div class="bg-white dark:bg-gray-400 p-4 shadow-md rounded-md">
             <h2 class="text-lg font-semibold">Total Orders</h2>
             <p class="text-3xl font-bold mt-2">128</p>
@@ -49,7 +50,7 @@
             <p class="text-3xl font-bold mt-2">128</p>
           </div>
      </div>
-
+   
       <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         <div class="m-5">
             <div class="flex items-center bg-slate-100 dark:bg-gray-400 shadow-xl rounded-xl max-w-sm mx-auto p-5 space-x-6">
@@ -82,12 +83,115 @@
          </div>
      </div>
       </div>
+      
+         
+      <div class="mt-5 flex flex-wrap gap-1">
+       <div class="rounded-md bg-white drop-shadow-md max-w-full lg:w-3/12 px-4 py-5 duration-500 hover:bg-black hover:text-white">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum animi tenetur exercitationem  nostrum animi tenetur exercitationem</p>
+       </div>
+       <div class="rounded-md bg-white drop-shadow-md max-w-full lg:w-3/12 px-4 py-5 duration-500 hover:bg-black hover:text-white">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum animi tenetur exercitationem  nostrum animi tenetur exercitationem</p>
+       </div>
+       <div class="rounded-md bg-white drop-shadow-md max-w-full lg:w-3/12 px-4 py-5 duration-500 hover:bg-black hover:text-white">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum animi tenetur exercitationem  nostrum animi tenetur exercitationem</p>
+       </div>
+       <div class="rounded-md bg-white drop-shadow-md max-w-full lg:w-3/12 px-4 py-5 duration-500 hover:bg-black hover:text-white">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum animi tenetur exercitationem  nostrum animi tenetur exercitationem</p>
+       </div>
+      </div>
+  
 
   
+      <h1> Example N° 1 </h1>
+      <ul class="tabs inline-flex  bg-slate-400 py-3 px-3 w-96" 
+            data-content="tab-content">
+            <li class="px-4 py-2 -mb-px font-semibold text-gray-800 border-b-2  border-blue-400  opacity-50">
+              <a class="default-tab" href="#ex1-tab1">TAB 1</a>
+            </li>
+            <li class="px-4 py-2 -mb-px font-semibold text-gray-800 border-b-2 border-blue-400  opacity-50">
+              <a href="#ex1-tab2">TAB 2</a>
+            </li>
+        </ul>
+      
+      
+      <div class="tabs-contents py-4 " id="tab-content">
+            <div id="ex1-tab1" >
+              Content of Tab 1:<br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lobortis augue, nec rhoncus lectus pharetra nec. Sed in cursus leo. Ut eget enim venenatis, blandit arcu viverra, venenatis leo. Curabitur vitae lacinia arcu, nec porttitor est. Vestibulum non ligula sed neque ullamcorper ultricies. Aenean tristique vitae nibh ut eleifend. Aenean nec eros pharetra libero aliquam bibendum.        
+             </div>
+            <div id="ex1-tab2" >
+              Content of Tab 2:<br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida lobortis augue, nec rhoncus lectus pharetra nec. Sed in cursus leo. Ut eget enim venenatis, blandit arcu viverra, venenatis leo. Curabitur vitae lacinia arcu, nec porttitor est. Vestibulum non ligula sed neque ullamcorper ultricies. Aenean tristique vitae nibh ut eleifend. Aenean nec eros pharetra libero aliquam bibendum.
+             </div>
+      </div>
+
+
+  <!-- extra -->
+  
+       <div class="flex flex-wrap gap-2 ">
+         <div class="max-w-full w-3/12 bg-white rounded-md px-3 py-3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quas provident delectus illum eaque obcaecati similique.
+          </p>
+         </div>
+
+         <div class="max-w-full w-3/12 bg-white rounded-md px-3 py-3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quas provident delectus illum eaque obcaecati similique.
+          </p>
+         </div>
+
+         <div class="max-w-full w-3/12 bg-white rounded-md px-3 py-3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quas provident delectus illum eaque obcaecati similique.
+          </p>
+         </div>
+
+         <div class="max-w-full w-3/12 bg-white rounded-md px-3 py-3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quas provident delectus illum eaque obcaecati similique.
+          </p>
+         </div>
+         
+            
+
+     
+       </div>
+       
+
+
+   
 </main>
 
 <script> 
+;(function() {
+  let tabs = document.querySelectorAll(".tabs");
 
+
+  tabs.forEach(function(tab) {
+      let tabTogglers = tab.querySelectorAll("a");
+
+      tabTogglers.forEach(function(toggler) {
+          toggler.addEventListener("click", function(e) {
+              e.preventDefault();
+
+              let tabName = this.getAttribute("href");
+
+              let tabContents = document.querySelector("#" + tab.getAttribute("data-content"));
+
+              for (let i = 0; i < tabContents.children.length; i++) {
+
+                  tabTogglers[i].parentElement.classList.remove("border-blue-400", "border-b", "-mb-px", "opacity-100", "bg-white", "shadow-md");
+                  tabContents.children[i].classList.remove("hidden");
+                  if ("#" + tabContents.children[i].id === tabName) {
+                      continue;
+                  }
+                  tabContents.children[i].classList.add("hidden");
+
+              }
+              e.target.parentElement.classList.add("rounded-md","border-blue-400", "border-b-4", "-mb-px", "opacity-100", "bg-white", "shadow-md", "duration-300");
+          });
+      });
+
+      tab.querySelectorAll(".default-tab")[0].click();
+  });
+})()
 </script> 
 </body>
 </html>
